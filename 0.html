@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚀 速达导航</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --card-bg: #ffffff;
+      --text: #333;
+      --shadow: rgba(0,0,0,0.06);
+      --hover-scale: 1.02;
+      --transition: all 0.15s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --card-bg: #1e1e1e;
+        --text: #f0f0f0;
+        --shadow: rgba(0,0,0,0.3);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+      border: 1px solid transparent;
+    }
+
+    .card:hover,
+    .card:focus {
+      transform: scale(var(--hover-scale));
+      box-shadow: 0 6px 16px var(--shadow);
+      border-color: rgba(0,123,255,0.2);
+      outline: none;
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .label {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .card:focus {
+      outline: 2px solid #007bff;
+      outline-offset: 4px;
+    }
+
+    body {
+      opacity: 0;
+      animation: fadeIn 0.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @media print {
+      body { padding: 20px; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">🚀 速达导航</h1>
+
+  <div class="grid">
+    <!-- 从 0.txt 提取的 8 个书签 -->
+    <a href="https://share.feijipan.com/n/jaBBP0" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">📂</div>
+      <div class="label">趣共享资源</div>
+    </a>
+
+    <a href="https://v.qq.com/" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">🎬</div>
+      <div class="label">腾讯视频</div>
+    </a>
+
+    <a href="https://chat.qwen.ai/" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">🤖</div>
+      <div class="label">通义千问</div>
+    </a>
+
+    <a href="https://metaso.cn/meta-user-info" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">🔍</div>
+      <div class="label">秘塔AI搜索</div>
+    </a>
+
+    <a href="https://cn.bing.com/translator?setlang=zh-cn" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">🌐</div>
+      <div class="label">Bing翻译</div>
+    </a>
+
+    <a href="https://yiso.work/info?searchKey=%E8%96%B0%E9%A6%99%E8%8A%B1%E6%9C%B5%E5%87%9B%E7%84%B6%E7%BB%BD%E6%94%BE" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">🧲</div>
+      <div class="label">易搜网盘</div>
+    </a>
+
+    <a href="https://space.bilibili.com/3546711710501617/relation/follow?spm_id_from=333.1387.0.0" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">📺</div>
+      <div class="label">B站关注</div>
+    </a>
+
+    <a href="https://www.alipan.com/drive/file/all" class="card" target="_blank" rel="noopener noreferrer">
+      <div class="icon">☁️</div>
+      <div class="label">阿里云盘</div>
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if ('fonts' in document) document.fonts.ready.catch(() => {});
+    });
+  </script>
+</body>
+</html>
